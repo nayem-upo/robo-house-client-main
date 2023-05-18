@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "John Smith",
+        "tags": "educational, remote control, interactive",
+        "image": "https://m.media-amazon.com/images/I/61kpHVaZb6L.jpg",
+        "toyRobotName": "RoboBuddy",
+        "views": 500,
+        "downloads": 250,
+        "likes": 120
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "tags": "interactive, voice command, imaginative",
+        "image": "https://www.collectiondx.com/files/reviews/MegaBlocks/IronMan2/IM2_MB_PF/qtrfly.jpg",
+        "toyRobotName": "TechBot",
+        "views": 750,
+        "downloads": 400,
+        "likes": 300
+    },
+    {
+        "id": 3,
+        "name": "Robert Johnson",
+        "tags": "programmable, AI, advanced",
+        "image": "https://i.ytimg.com/vi/S4H6zDtX9Sw/maxresdefault.jpg",
+        "toyRobotName": "AI Robo",
+        "views": 1000,
+        "downloads": 800,
+        "likes": 500
+    },
+    {
+        "id": 4,
+        "name": "Emily Wilson",
+        "tags": "coding, fun, puzzle-solving",
+        "image": "https://i.ytimg.com/vi/g-C7PGjwZbs/maxresdefault.jpg",
+        "toyRobotName": "CodeBot",
+        "views": 300,
+        "downloads": 150,
+        "likes": 90
+    },
+    {
+        "id": 5,
+        "name": "Michael Anderson",
+        "tags": "sensor, playful, interactive",
+        "image": "https://ae01.alicdn.com/kf/Hfd44a83e402345bca3215cac0131fcf9o/PP-Cotton-Children-s-Toy-Metal-Silver-Futuristic-Cute-Cute-Cosmic-Space-Alien-Robot-Boy-s.jpg",
+        "toyRobotName": "Sensy",
+        "views": 400,
+        "downloads": 200,
+        "likes": 110
+    },
+    {
+        "id": 6,
+        "name": "Sophia Thompson",
+        "tags": "building, creative, hands-on",
+        "image": "https://cdn.rebrickable.com/media/thumbs/sets/31090-1/21968.jpg/1000x800p.jpg?1657635554.2290957",
+        "toyRobotName": "BuildMaster",
+        "views": 600,
+        "downloads": 350,
+        "likes": 240
+    },
+    {
+        "id": 7,
+        "name": "Daniel Garcia",
+        "tags": "exploration, adventure, outdoor",
+        "image": "https://static.toiimg.com/thumb/msid-80331585,width-1280,resizemode-4/80331585.jpg",
+        "toyRobotName": "ExploreBot",
+        "views": 900,
+        "downloads": 600,
+        "likes": 400
+    },
+    {
+        "id": 8,
+        "name": "Olivia Roberts",
+        "tags": "music, entertainment, dancing",
+        "image": "https://i.etsystatic.com/8276535/r/il/c7087b/2191863745/il_fullxfull.2191863745_bdk5.jpg",
+        "toyRobotName": "RockstarBot",
+        "views": 1200,
+        "downloads": 900,
+        "likes": 700
+    },
+    {
+        "id": 9,
+        "name": "William Davis",
+        "tags": "puzzle, challenge, problem-solving",
+        "image": "https://i.ytimg.com/vi/_6UaP7OCTSI/maxresdefault.jpg",
+        "toyRobotName": "PuzzleBot",
+        "views": 200,
+        "downloads": 100,
+        "likes": 70
+    },
+    {
+        "id": 10,
+        "name": "Emma Thompson",
+        "tags": "sports, competition, active",
+        "image": "https://www.brickfanatics.com/wp-content/uploads/LEGO-Mindstorms-51515-Robot-Inventor-featured-2.jpg",
+        "toyRobotName": "SportyBot",
+        "views": 800,
+        "downloads": 500,
+        "likes": 350
+    },
+    {
+        "id": 11,
+        "name": "Isabella Turner",
+        "tags": "coding, programming, logical",
+        "image": "https://ae01.alicdn.com/kf/H981a325c4eb543cc891b40943ce43a5ab.jpg",
+        "toyRobotName": "CodeMaster",
+        "views": 350,
+        "downloads": 200,
+        "likes": 130
+    },
+    {
+        "id": 12,
+        "name": "Liam Anderson",
+        "tags": "learning, AI, educational",
+        "image": "https://thetoystorelb.com/files/base/portal/width/600/height/600/crop/600x600x1/images/products/900-hbb04.jpg",
+        "toyRobotName": "LearnBot",
+        "views": 600,
+        "downloads": 400,
+        "likes": 300
+    }
+]
