@@ -8,7 +8,6 @@ const Gallery = () => {
             .then(res => res.json())
             .then(data => setImages(data))
     }, [])
-    console.log(images);
     return (
         <div className='text-center my-20'>
             <h1 className='text-4xl font-bold text-[#9C29B2]'>Robo Gallery</h1>
