@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
-import { updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { createUser, auth } = useContext(AuthContext)
+    const { createUser, auth, googleLogin } = useContext(AuthContext)
     const [disable, setDisable] = useState(true)
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleCreateUser = (event) => {
         event.preventDefault();
@@ -21,15 +24,13 @@ const Register = () => {
             .then((userCredential) => {
                 setError("")
                 setSuccess("Register Successfull")
+                navigate(from, { replace: true });
                 const user = userCredential.user;
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
                 }).then(() => {
-                    // Profile updated!
                 }).catch((error) => {
-                    // An error occurred
                 });
-                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -37,6 +38,25 @@ const Register = () => {
                 setSuccess("")
                 setError(errorMessage)
                 console.log(errorMessage);
+            });
+    }
+
+    const handleGoogleRegister = () => {
+        googleLogin()
+            .then((result) => {
+                navigate(from, { replace: true });
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                setError("")
+                setSuccess("Register Successfull")
+                const user = result.user;
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                setSuccess("")
+                setError(errorMessage)
+                const email = error.customData.email;
+                const credential = GoogleAuthProvider.credentialFromError(error);
             });
     }
 
@@ -93,7 +113,7 @@ const Register = () => {
                         }
                     </form>
                     <div className="divider">OR</div>
-                    <button className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-1/2 mx-auto border-[#88C90D]'>Sign up with Google</button>
+                    <button onClick={handleGoogleRegister} className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-1/2 mx-auto border-[#88C90D] duration-300'>Sign up with Google</button>
                 </div>
                 <div className='text-center bg-[#88C90D] rounded-r-xl md:w-[320px] md:py-20'>
                     <div className='text-center'>
@@ -101,7 +121,7 @@ const Register = () => {
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
                     <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>Already have account? </span><br /> Fill up your login infomation.</p>
-                    <Link to="/login" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff]'>Sign In</Link>
+                    <Link to="/login" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign In</Link>
                 </div>
 
             </div>

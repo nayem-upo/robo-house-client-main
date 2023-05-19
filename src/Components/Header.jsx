@@ -25,16 +25,16 @@ const Header = () => {
                     </div>
                     <div className='flex items-center btn btn-ghost normal-case text-xl'>
                         <img className='w-12' src="https://i.ibb.co/dP9qynR/robot-press-tineye-15.png" alt="" />
-                        <NavLink className="text-3xl"><span className='text-[#9C29B2]'>Robo</span> <span className='text-[#88C90D]'>House</span></NavLink>
+                        <NavLink className="text-3xl"><span className='text-[#9C29B2]'>Robo</span> <span className='text-[#88C90D] duration-300'>House</span></NavLink>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="gap-10 menu-horizontal px-1 text-xl font-semibold">
-                        <li className='hover:text-[#88C90D]'><NavLink>Home</NavLink></li>
-                        <li className='hover:text-[#88C90D]'><NavLink>All Toys</NavLink></li>
-                        {user && <li className='hover:text-[#88C90D]'><NavLink>My Toys</NavLink></li>}
-                        {user && <li className='hover:text-[#88C90D]'><NavLink>Add A Toy</NavLink></li>}
-                        <li className='hover:text-[#88C90D]'><NavLink>Blogs</NavLink></li>
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink>Home</NavLink></li>
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink>All Toys</NavLink></li>
+                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink>My Toys</NavLink></li>}
+                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink>Add A Toy</NavLink></li>}
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink>Blogs</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -55,7 +55,7 @@ const Header = () => {
                                 </ul>
                             </div>
                             :
-                            <Link to="/login"><button className='me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D]'>Login</button></Link>
+                            <Link to="/login"><button className='me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D] duration-300'>Login</button></Link>
                     }
                 </div>
             </div>

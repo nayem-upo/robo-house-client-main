@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, googleLogin } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -18,14 +22,33 @@ const Login = () => {
                 const user = userCredential.user;
                 setError("")
                 setSuccess("Login Successfull")
-                console.log(user);
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 setSuccess("")
                 setError(errorMessage)
-                console.log(errorMessage);
+            });
+    }
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then((result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                setError("")
+                setSuccess("Login Successfull")
+                const user = result.user;
+                navigate(from, { replace: true });
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                const email = error.customData.email;
+                setSuccess("")
+                setError(errorMessage)
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
             });
     }
     return (
@@ -79,7 +102,7 @@ const Login = () => {
                         }
                     </form>
                     <div className="divider">OR</div>
-                    <button className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-1/2 mx-auto border-[#88C90D]'>Sign in with Google</button>
+                    <button onClick={handleGoogleLogin} className='border-2 p-1 hover:text-white hover:bg-[#74b300] duration-300 rounded-2xl w-1/2 mx-auto border-[#88C90D]'>Sign in with Google</button>
                 </div>
                 <div className='text-center bg-[#88C90D] rounded-r-xl md:w-[320px] md:py-20'>
                     <div className='text-center'>
@@ -87,7 +110,7 @@ const Login = () => {
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
                     <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>New on this site? </span><br /> Fill up personal infomation and start journey with us.</p>
-                    <Link to="/register" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff]'>Sign Up</Link>
+                    <Link to="/register" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign Up</Link>
                 </div>
 
             </div>
