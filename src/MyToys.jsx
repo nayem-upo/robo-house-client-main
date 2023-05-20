@@ -51,7 +51,7 @@ const MyToys = () => {
 
     return (
         <div className="mb-20">
-            <div className='bg-[#9C29B2] text-white my-10 w-[350px] text-3xl text-center mx-auto rounded-xl p-3 md:w-[600px] font-semibold'>All Toys - Robo House</div>
+            <div className='bg-[#9C29B2] text-white my-10 w-[350px] text-3xl text-center mx-auto rounded-xl p-3 md:w-[600px] font-semibold'>My Toys - Robo House</div>
             <div className="w-[80%] mx-auto">
                 <div className='flex justify-between'>
                     <div>
