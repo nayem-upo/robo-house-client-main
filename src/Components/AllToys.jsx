@@ -79,7 +79,7 @@ const AllToys = () => {
                                             <th className="px-4 py-3 title-font tracking-wider font-semibold text-[#9C29B2] text-sm bg-gray-100">Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody data-aos="fade-down">
                                         {
                                             toys.map(toy => <Toy key={toy._id} toy={toy}></Toy>)
                                         }

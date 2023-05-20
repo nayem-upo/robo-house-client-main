@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Toy = ({ toy }) => {
     const { _id, image, name, seller, category, price, quantity } = toy;
     return (
-        <tr>
+        <tr data-aos="zoom-in">
             <td><img className="border-b-2 object-cover h-20 border-gray-200 w-24 p-2 rounded-2xl" src={image} alt="" /></td>
             <td className="border-b-2 border-gray-200 px-4 py-3 w-40">{name}</td>
             <td className="border-b-2 border-gray-200 px-4 py-3">{seller}</td>
