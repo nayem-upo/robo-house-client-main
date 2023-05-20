@@ -32,7 +32,7 @@ const Categorys = () => {
                         <Tab className="tab md:tab-lg tab-lifted text-[#9C29B2] focus:outline-none font-bold">Educational</Tab>
                     </TabList>
 
-                    <TabPanel className="flex md:flex-row flex-col gap-6">
+                    <TabPanel className="flex md:flex-row flex-col gap-6 md:ms-0 ms-3">
                         <div className='w-[300px] bg-[#87c90d2f] text-left p-4 rounded shadow-xl'>
                             <img className='rounded-xl object-cover h-[180px] w-full' src="https://www.yankodesign.com/images/design_news/2017/01/mip/mip_01.jpg" alt="" />
                             <h1 className='py-2 text-xl text-[#9C29B2] font-bold'>RoboBuddy</h1>
@@ -106,7 +106,7 @@ const Categorys = () => {
                         </div>
 
                     </TabPanel>
-                    <TabPanel className="flex md:flex-row flex-col  gap-6">
+                    <TabPanel className="flex md:flex-row flex-col gap-6 ms-3">
                         <div className='w-[300px] bg-[#87c90d2f] text-left p-4 rounded shadow-xl'>
                             <img className='rounded-xl object-cover h-[180px] w-full' src="https://i.ytimg.com/vi/K-zLHpyK1ws/maxresdefault.jpg" alt="" />
                             <h1 className='py-2 text-xl text-[#9C29B2] font-bold'>RC RoboRacer</h1>
@@ -179,7 +179,7 @@ const Categorys = () => {
                             <label onClick={handleDetails} htmlFor="my-modal-6" className="btn h-6 border-none w-full hover:bg-[#88C90D] rounded-md text-white bg-[#9C29B2]">View Details</label>
                         </div>
                     </TabPanel>
-                    <TabPanel className="flex md:flex-row flex-col gap-6">
+                    <TabPanel className="flex md:flex-row flex-col gap-6 ms-3">
                         <div className='w-[300px] bg-[#87c90d2f] text-left p-4 rounded shadow-xl'>
                             <img className='rounded-xl object-cover h-[180px] w-full' src="https://images.ctfassets.net/78zcc00ye1wi/2cW2XbI6o728QblKJ86GEm/e046b9cbc71b327283f9861cc6961bf6/Robot_Toys.png?w=1600&h=1000&fit=fill&fm=png" alt="" />
                             <h1 className='py-2 text-xl text-[#9C29B2] font-bold'>LearnBot</h1>
