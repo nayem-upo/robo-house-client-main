@@ -22,10 +22,10 @@ const Categorys = () => {
     }
     return (
         <div className='text-center'>
-            <h1 className='text-4xl font-bold text-[#9C29B2]'>Shop by category</h1>
-            <p className='text-5xl text-[#88C90D] my-5'>Find your favourite products by categories</p>
+            <h1 data-aos="fade-left" className='text-4xl font-bold text-[#9C29B2]'>Shop by category</h1>
+            <p data-aos="fade-left" className='text-5xl text-[#88C90D] my-5'>Find your favourite products by categories</p>
             <div className='flex justify-center'>
-                <Tabs className="mb-10">
+                <Tabs data-aos="fade-up" className="mb-10">
                     <TabList className="tabs flex justify-center my-5">
                         <Tab className={`tab md:tab-lg tab-lifted text-[#9C29B2] focus:outline-none font-bold`}>Entertainment</Tab>
                         <Tab className="tab md:tab-lg tab-lifted text-[#9C29B2] focus:outline-none font-bold">Remote Control</Tab>

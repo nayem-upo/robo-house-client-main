@@ -3,7 +3,7 @@ import React from "react";
 const ImageCard = ({ image }) => {
     const tags = image.tags.split(",");
     return (
-        <div className="max-w-sm  rounded overflow-hidden shadow-lg mx-auto">
+        <div data-aos="fade-up" className="max-w-sm  rounded overflow-hidden shadow-lg mx-auto">
             <img src={image.image} alt="" className="h-[220px] w-[400px] object-cover" />
             <div className="px-6 py-4">
                 <div className="font-bold text-purple-500 text-xl mb-2">
