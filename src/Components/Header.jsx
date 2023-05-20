@@ -55,7 +55,7 @@ const Header = () => {
                                 </ul>
                             </div>
                             :
-                            <Link to="/login"><button className='me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D] duration-300'>Login</button></Link>
+                            <Link to="/login"><button className='md:me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D] duration-300'>Login</button></Link>
                     }
                 </div>
             </div>
