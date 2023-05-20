@@ -110,7 +110,7 @@ const Login = () => {
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
                     <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>New on this site? </span><br /> Fill up personal infomation and start journey with us.</p>
-                    <Link to="/register" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign Up</Link>
+                    <Link to="/register" className='text-[#9C29B2] border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign Up</Link>
                 </div>
 
             </div>

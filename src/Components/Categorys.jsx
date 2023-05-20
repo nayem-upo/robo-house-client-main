@@ -289,7 +289,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-1" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -326,7 +326,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-2" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -363,7 +363,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-3" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -400,7 +400,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-4" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -437,7 +437,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-5" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -474,7 +474,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-6" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -511,7 +511,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-7" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -548,7 +548,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-8" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>
@@ -585,7 +585,7 @@ const Categorys = () => {
                                     </div>
                                 </div>
 
-                                <div className="modal-action">
+                                <div className="modal-action mt-0">
                                     <label htmlFor="my-modal-9" className="btn bg-[#9C29B2] border-none">Done!</label>
                                 </div>
                             </div>

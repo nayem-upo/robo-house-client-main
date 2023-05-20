@@ -4,7 +4,8 @@ import { AuthContext } from './AuthProvider';
 import { GoogleAuthProvider, updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { createUser, auth, googleLogin } = useContext(AuthContext)
+    const { createUser, auth, googleLogin } = useContext(AuthContext);
+
     const [disable, setDisable] = useState(true)
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -22,9 +23,9 @@ const Register = () => {
         console.log(name, email, password, photo);
         createUser(email, password)
             .then((userCredential) => {
+                navigate(from, { replace: true });
                 setError("")
                 setSuccess("Register Successfull")
-                navigate(from, { replace: true });
                 const user = userCredential.user;
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
@@ -73,7 +74,7 @@ const Register = () => {
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Name' type="name" name="name" id="name" required />
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Email' type="email" name="email" id="email" required />
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Password' type="password" name="password" id="password" required />
-                        <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Photo URL' type="photo" name="photo" id="photo" />
+                        <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Photo URL (optional)' type="photo" name="photo" id="photo" />
                         <div className='flex justify-between'>
                             <span className='flex items-center gap-2'><label
                                 className="relative flex cursor-pointer items-center rounded-full"
@@ -121,7 +122,7 @@ const Register = () => {
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
                     <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>Already have account? </span><br /> Fill up your login infomation.</p>
-                    <Link to="/login" className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign In</Link>
+                    <Link to="/login" className='text-[#9C29B2] border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign In</Link>
                 </div>
 
             </div>

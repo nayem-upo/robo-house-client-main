@@ -16,11 +16,11 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52">
-                            <li><NavLink>Home</NavLink></li>
-                            <li><NavLink>All Toys</NavLink></li>
-                            {user && <li><NavLink>My Toys</NavLink></li>}
-                            {user && <li><NavLink>Add A Toy</NavLink></li>}
-                            <li><NavLink>Blogs</NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/">Home</NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/alltoys">All Toys</NavLink></li>
+                            {user && <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/mytoys">My Toys</NavLink></li>}
+                            {user && <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/add">Add A Toy</NavLink></li>}
+                            <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/blogs">Blogs</NavLink></li>
                         </ul>
                     </div>
                     <div className='flex items-center btn btn-ghost normal-case text-xl'>
@@ -30,11 +30,11 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="gap-10 menu-horizontal px-1 text-xl font-semibold">
-                        <li className='hover:text-[#88C90D] duration-300'><NavLink>Home</NavLink></li>
-                        <li className='hover:text-[#88C90D] duration-300'><NavLink>All Toys</NavLink></li>
-                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink>My Toys</NavLink></li>}
-                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink>Add A Toy</NavLink></li>}
-                        <li className='hover:text-[#88C90D] duration-300'><NavLink>Blogs</NavLink></li>
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/">Home</NavLink></li>
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/alltoys">All Toys</NavLink></li>
+                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/mytoys">My Toys</NavLink></li>}
+                        {user && <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/add">Add A Toy</NavLink></li>}
+                        <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/blogs">Blogs</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -53,7 +53,7 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <form onSubmit={handleFeedback} className="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-                        <h2 className="text-[#9C29B2] text-2xl mb-1 font-medium title-font">
+                        <h2 className="text-[#9C29B2] text-3xl mb-1 font-semibold title-font">
                             Feedback
                         </h2>
                         <p className="leading-relaxed mb-5 text-gray-600">

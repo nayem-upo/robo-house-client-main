@@ -10,11 +10,20 @@ import Home from './Components/Home';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import AuthProvider from './Components/AuthProvider';
+import AddToy from './Components/AddToy';
+import AllToys from './Components/AllToys';
+import MyToys from './MyToys';
+import Blogs from './Components/Blogs';
+import Private from './Components/Private';
+import UpdateToy from './UpdateToy';
+import ToyDetails from './Components/ToyDetails';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layoutes></Layoutes>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -27,6 +36,32 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/add",
+        element: <Private><AddToy></AddToy></Private>,
+      },
+      {
+        path: "/alltoys",
+        element: <AllToys></AllToys>,
+      },
+      {
+        path: "/mytoys",
+        element: <Private><MyToys></MyToys></Private>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/update/:id",
+        element: <UpdateToy></UpdateToy>,
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+      },
+      {
+        path: "/details/:id",
+        element: <Private><ToyDetails></ToyDetails></Private>,
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
       },
     ]
   },

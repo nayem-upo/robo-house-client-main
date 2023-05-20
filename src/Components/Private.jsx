@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
 const Private = ({ children }) => {
@@ -8,7 +8,7 @@ const Private = ({ children }) => {
     if (loading) {
         return (
             <div className=''>
-
+                <h1 className='text-7xl'>Loading</h1>
             </div>)
     }
 
