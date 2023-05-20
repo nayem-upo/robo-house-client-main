@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
-            <div className='bg-[#424240] grid grid-cols-4 p-10'>
+            <div className='bg-[#424240] grid md:grid-cols-4 grid-cols-1 gap-5 p-10'>
                 <div>
                     <div className='flex items-center font-semibold normal-case text-xl'>
                         <img className='w-12' src="https://i.ibb.co/dP9qynR/robot-press-tineye-15.png" alt="" />
