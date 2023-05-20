@@ -45,7 +45,7 @@ const UpdateToy = () => {
         }
 
         if (name.length > 0 && description.length > 0 && price.length > 0 && quantity.length > 0) {
-            fetch(`http://localhost:5000/toy/${_id}`, {
+            fetch(`https://robo-house-server.vercel.app/toy/${_id}`, {
                 method: "PUT",
                 headers: {
                     'content-type': 'application/json'

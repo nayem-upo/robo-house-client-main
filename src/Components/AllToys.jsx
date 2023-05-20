@@ -12,7 +12,7 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState("")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toy?limit=${limit}`)
+        fetch(`https://robo-house-server.vercel.app/toy?limit=${limit}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user, limit])
@@ -20,12 +20,12 @@ const AllToys = () => {
 
     const handleSearch = () => {
         if (searchText < 1) {
-            fetch(`http://localhost:5000/toy?limit=${limit}`)
+            fetch(`https://robo-house-server.vercel.app/toy?limit=${limit}`)
                 .then(res => res.json())
                 .then(data => setToys(data))
             return;
         }
-        fetch(`http://localhost:5000/toySearch/${searchText}`)
+        fetch(`https://robo-house-server.vercel.app/toySearch/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);

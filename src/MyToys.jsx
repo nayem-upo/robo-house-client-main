@@ -12,7 +12,7 @@ const MyToys = () => {
     const [filter, setFilter] = useState(1)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/filterdToy?search=${user.email}&filter=${filter}`)
+        fetch(`https://robo-house-server.vercel.app/filterdToy?search=${user.email}&filter=${filter}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user.email, filter])
@@ -30,7 +30,7 @@ const MyToys = () => {
         })
             .then((result => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/toy/${id}`, {
+                    fetch(`https://robo-house-server.vercel.app/toy/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

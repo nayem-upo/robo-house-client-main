@@ -55,13 +55,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+        element: <Private><UpdateToy></UpdateToy></Private>,
+        loader: ({ params }) => fetch(`https://robo-house-server.vercel.app/toy/${params.id}`)
       },
       {
         path: "/details/:id",
         element: <Private><ToyDetails></ToyDetails></Private>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://robo-house-server.vercel.app/toy/${params.id}`)
       },
     ]
   },

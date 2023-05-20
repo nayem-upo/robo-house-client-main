@@ -55,7 +55,7 @@ const AddToy = () => {
 
         if (name.length > 0 && image.length > 0 && description.length > 0 && category.length > 0 && seller.length > 0 && email.length > 0 && price.length > 0 && quantity.length > 0 && rating.length) {
 
-            fetch('http://localhost:5000/toy', {
+            fetch('https://robo-house-server.vercel.app/toy', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

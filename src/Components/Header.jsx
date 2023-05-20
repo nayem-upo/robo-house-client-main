@@ -25,7 +25,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center btn btn-ghost normal-case text-xl'>
                         <img className='w-12' src="https://i.ibb.co/dP9qynR/robot-press-tineye-15.png" alt="" />
-                        <NavLink className="text-3xl"><span className='text-[#9C29B2]'>Robo</span> <span className='text-[#88C90D] duration-300'>House</span></NavLink>
+                        <NavLink to="/" className="text-3xl"><span className='text-[#9C29B2]'>Robo</span> <span className='text-[#88C90D] duration-300'>House</span></NavLink>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
