@@ -11,12 +11,10 @@ const UpdateToy = () => {
     const handleUpdateToy = (event) => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
         const description = form.description.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
         const updatedToy = {
-            name,
             description,
             price,
             quantity
