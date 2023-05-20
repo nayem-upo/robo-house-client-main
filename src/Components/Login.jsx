@@ -53,16 +53,16 @@ const Login = () => {
     }
     return (
         <div>
-            <div className='flex justify-between w-[900px] border mx-auto my-10 rounded-xl'>
-                <div className='md:w-[300px] justify-center flex flex-col mx-auto py-10'>
+            <div className='md:flex justify-between md:w-[900px] border mx-auto my-10 rounded-xl'>
+                <div className='md:w-[300px] justify-center flex flex-col mx-auto py-4'>
                     <div className='my-4 text-center'>
                         <h1 className='text-3xl font-semibold text-[#88C90D]'>Sign in to Account</h1>
                         <hr className="border-2 w-14 mx-auto border-[#88C90D] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
 
-                    <form onSubmit={handleLogin} className='flex flex-col gap-3'>
-                        <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Email' type="email" name="email" id="email" required />
-                        <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Password' type="password" name="password" id="password" required />
+                    <form onSubmit={handleLogin} className='flex flex-col gap-3 md:w-full mx-auto w-[300px]'>
+                        <input className='bg-[#F3F4F6] h-10 mx-auto w-[300px] ps-3 outline-none' placeholder='Email' type="email" name="email" id="email" required />
+                        <input className='bg-[#F3F4F6] h-10 mx-auto w-[300px] ps-3 outline-none' placeholder='Password' type="password" name="password" id="password" required />
                         <div className='flex justify-between'>
                             <span className='flex items-center gap-2'><label
                                 className="relative flex cursor-pointer items-center rounded-full"
@@ -104,12 +104,12 @@ const Login = () => {
                     <div className="divider">OR</div>
                     <button onClick={handleGoogleLogin} className='border-2 p-1 hover:text-white hover:bg-[#74b300] duration-300 rounded-2xl w-1/2 mx-auto border-[#88C90D]'>Sign in with Google</button>
                 </div>
-                <div className='text-center bg-[#88C90D] rounded-r-xl md:w-[320px] md:py-20'>
+                <div className='text-center bg-[#88C90D] w-[95%] mx-auto rounded-xl md:rounded-r-xl md:w-[320px] py-5 md:py-20'>
                     <div className='text-center'>
-                        <h1 className='text-3xl font-semibold text-[#ffffff] py-2'>Hello, User !</h1>
+                        <h1 className='text-3xl font-semibold text-[#ffffff] md:py-2'>Hello, User !</h1>
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
-                    <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>New on this site? </span><br /> Fill up personal infomation and start journey with us.</p>
+                    <p className='mx-auto md:w-[200px] text-white my-3 md:my-9'><span className='text-xl font-semibold'>New on this site? </span><br /> Fill up personal infomation and start journey with us.</p>
                     <Link to="/register" className='text-[#9C29B2] border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign Up</Link>
                 </div>
 

@@ -63,14 +63,14 @@ const Register = () => {
 
     return (
         <div>
-            <div className='flex justify-between w-[900px] border mx-auto my-10 rounded-xl'>
+            <div className='md:flex justify-between md:w-[900px] border mx-auto my-10 rounded-xl'>
                 <div className='md:w-[300px] justify-center flex flex-col mx-auto py-4'>
                     <div className='my-4 text-center'>
                         <h1 className='text-3xl font-semibold text-[#88C90D]'>Sign up to Account</h1>
                         <hr className="border-2 w-14 mx-auto border-[#88C90D] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
 
-                    <form onSubmit={handleCreateUser} className='flex flex-col gap-3'>
+                    <form onSubmit={handleCreateUser} className='flex flex-col gap-3 md:w-full mx-auto w-[300px]'>
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Name' type="name" name="name" id="name" required />
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Email' type="email" name="email" id="email" required />
                         <input className='bg-[#F3F4F6] h-10 w-[300px] ps-3 outline-none' placeholder='Password' type="password" name="password" id="password" required />
@@ -116,12 +116,12 @@ const Register = () => {
                     <div className="divider">OR</div>
                     <button onClick={handleGoogleRegister} className='border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-1/2 mx-auto border-[#88C90D] duration-300'>Sign up with Google</button>
                 </div>
-                <div className='text-center bg-[#88C90D] rounded-r-xl md:w-[320px] md:py-20'>
+                <div className='text-center bg-[#88C90D] w-[95%] mx-auto rounded-xl md:rounded-r-xl md:w-[320px] py-5 md:py-20'>
                     <div className='text-center'>
-                        <h1 className='text-3xl font-semibold text-[#ffffff] py-2'>Hello, User !</h1>
+                        <h1 className='text-3xl font-semibold text-[#ffffff] md:py-2'>Hello, User !</h1>
                         <hr className="border-2 w-14 mx-auto border-[#ffffff] cursor-pointer hover:border-red-500 duration-500" />
                     </div>
-                    <p className='mx-auto md:w-[200px] text-white my-9'><span className='text-xl font-semibold'>Already have account? </span><br /> Fill up your login infomation.</p>
+                    <p className='mx-auto md:w-[200px] text-white my-3 md:my-9'><span className='text-xl font-semibold'>Already have account? </span><br /> Fill up your login infomation.</p>
                     <Link to="/login" className='text-[#9C29B2] border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl px-9 py-2 border-[#ffffff] duration-300'>Sign In</Link>
                 </div>
 
