@@ -66,11 +66,11 @@ const UpdateToy = () => {
     }
     return (
         <div>
-            <div className='bg-[#9C29B2] text-white my-10 text-3xl text-center mx-auto rounded-xl p-3 w-[600px] font-semibold'>Update a toy - Robo House</div>
+            <div className='bg-[#9C29B2] text-white my-10 w-[350px] text-3xl text-center mx-auto rounded-xl p-3 md:w-[600px] font-semibold'>Update a toy - Robo House</div>
             <div className='w-[80%] mx-auto my-3'>
                 <Link to="/mytoys"><h1 className="flex gap-2 items-center hover:underline"><svg width="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-left"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="7.6 7 2.5 12 7.6 17" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></polyline> <line fill="none" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="21.5" x2="4.8" y1="12" y2="12"></line> </g> </g> </g> </g></svg> Back to My Toys</h1></Link>
             </div>
-            <div className='w-[80%] mb-10 mx-auto text-center bg-[#9b29b215] p-10'>
+            <div className='md:w-[80%] w-[92%] rounded mb-10 mx-auto text-center bg-[#9b29b215] md:p-10 py-5'>
                 <h1 className="text-4xl text-[#88C90D] font-bold">Update Toy</h1>
                 <h1 className="py-2">Use the below form to update a toy</h1>
                 <form onSubmit={handleUpdateToy} className="w-[80%] mx-auto">
