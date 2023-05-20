@@ -8,7 +8,11 @@ const ToyDetails = () => {
     useTitle("Details")
     const toys = useLoaderData();
     const { name, _id, description, price, quantity, image, seller, rating, email, category } = toys;
-    
+    const firstExample = {
+        size: 25,
+        value: parseInt(rating),
+        edit: false,
+    };
     return (
         <div>
             <section className="text-gray-600 body-font overflow-hidden">
