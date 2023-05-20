@@ -5,8 +5,10 @@ import Categorys from './Categorys';
 import Service from './Service';
 import Carousel from './Carousel';
 import ContactUs from './ContactUs';
+import useTitle from './useTitle';
 
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <MainBanner></MainBanner>

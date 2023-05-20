@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from './useTitle';
 
 const Blogs = () => {
+    useTitle("Blogs")
     return (
         <div>
             <div className='text-center my-5'>

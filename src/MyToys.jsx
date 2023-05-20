@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './Components/AuthProvider';
 import PrivateToy from './Components/PrivateToy';
 import Swal from 'sweetalert2';
+import useTitle from './Components/useTitle';
 
 const MyToys = () => {
+    useTitle("My Toys")
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     const [filter, setFilter] = useState(1)

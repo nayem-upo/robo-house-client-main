@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from './AuthProvider';
+import useTitle from './useTitle';
 
 const AddToy = () => {
+    useTitle("Add Toy")
     const { user } = useContext(AuthContext);
 
     const handleAddToy = (event) => {

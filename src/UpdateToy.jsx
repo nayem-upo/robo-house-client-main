@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { AuthContext } from './Components/AuthProvider';
 import Swal from 'sweetalert2';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from './Components/useTitle';
 
 const UpdateToy = () => {
+    useTitle("Update Toy")
     const { user } = useContext(AuthContext);
     const toys = useLoaderData();
     const { name, _id, description, price, quantity } = toys;

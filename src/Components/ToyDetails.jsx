@@ -2,8 +2,10 @@ import React from 'react';
 import Rating from 'react-rating';
 import { Link, useLoaderData } from 'react-router-dom';
 import ReactStars from 'react-stars';
+import useTitle from './useTitle';
 
 const ToyDetails = () => {
+    useTitle("Details")
     const toys = useLoaderData();
     const { name, _id, description, price, quantity, image, seller, rating, email, category } = toys;
     const firstExample = {

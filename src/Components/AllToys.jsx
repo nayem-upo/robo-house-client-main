@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import Toy from './Toy';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
+import useTitle from './useTitle';
 
 const AllToys = () => {
-
+    useTitle("All Toys")
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     const [limit, setLimit] = useState(20);
