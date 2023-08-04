@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
+import { Link } from 'react-scroll';
 
 const Header = () => {
     const { user, userLogOut } = useContext(AuthContext);
@@ -20,6 +21,12 @@ const Header = () => {
                             <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/alltoys">All Toys</NavLink></li>
                             {user && <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/mytoys">My Toys</NavLink></li>}
                             {user && <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/add">Add A Toy</NavLink></li>}
+                            <Link to="service" smooth={true} duration={500}>
+                                <li className='hover:text-[#88C90D] duration-300 cursor-pointer'>Service</li>
+                            </Link>
+                            <Link to="contact" smooth={true} duration={500}>
+                                <li className='hover:text-[#88C90D] duration-300 cursor-pointer'>Contact</li>
+                            </Link>
                             <li><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/blogs">Blogs</NavLink></li>
                         </ul>
                     </div>
@@ -34,6 +41,12 @@ const Header = () => {
                         <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/alltoys">All Toys</NavLink></li>
                         {user && <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/mytoys">My Toys</NavLink></li>}
                         {user && <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/add">Add A Toy</NavLink></li>}
+                        <Link to="service" smooth={true} duration={500}>
+                            <li className='hover:text-[#88C90D] duration-300 cursor-pointer'>Service</li>
+                        </Link>
+                        <Link to="contact" smooth={true} duration={500}>
+                            <li className='hover:text-[#88C90D] duration-300 cursor-pointer'>Contact</li>
+                        </Link>
                         <li className='hover:text-[#88C90D] duration-300'><NavLink className={({ isActive }) => isActive ? "text-[#9C29B2]" : "hover:text-[#88C90D] duration-300"} to="/blogs">Blogs</NavLink></li>
                     </ul>
                 </div>
@@ -55,7 +68,7 @@ const Header = () => {
                                 </ul>
                             </div>
                             :
-                            <Link to="/login"><button className='md:me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D] duration-300'>Login</button></Link>
+                            <NavLink to="/login"><button className='md:me-10 border-2 p-1 hover:text-white hover:bg-[#74b300] rounded-2xl w-20 mx-auto border-[#88C90D] duration-300'>Login</button></NavLink>
                     }
                 </div>
             </div>

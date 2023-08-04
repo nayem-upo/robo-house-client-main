@@ -6,6 +6,8 @@ import Service from './Service';
 import Carousel from './Carousel';
 import ContactUs from './ContactUs';
 import useTitle from './useTitle';
+import SubBanner from './SubBanner';
+import Sponsors from './Sponsors';
 
 const Home = () => {
     useTitle("Home")
@@ -15,8 +17,10 @@ const Home = () => {
             <Gallery></Gallery>
             <Categorys></Categorys>
             <Service></Service>
+            <SubBanner></SubBanner>
             <Carousel></Carousel>
             <ContactUs></ContactUs>
+            <Sponsors></Sponsors>
         </div>
     );
 };

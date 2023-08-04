@@ -2,7 +2,7 @@ import React from 'react';
 
 const Service = () => {
     return (
-        <div className='text-center my-10'>
+        <div className='text-center my-10' id='service'>
             <h1 data-aos="fade-right" className='text-4xl font-bold text-[#9C29B2]'>Service We Provide</h1>
             <p data-aos="fade-right" className='text-5xl text-[rgb(136,201,13)] my-5 mx-2'>Providing Good Qualities Toy For Your Kids</p>
             <div className='grid md:grid-cols-4 grid-cols-1 w-[300px] md:w-full gap-10 max-w-[1100px] mx-auto my-10'>
